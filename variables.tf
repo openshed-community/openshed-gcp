@@ -11,7 +11,7 @@ variable "gcp_service_name" {
   default = "openshed"
 }
 
-variable "django_allowed_hosts" {
+variable "gcp_service_suffix" {
   type = string
 }
 
