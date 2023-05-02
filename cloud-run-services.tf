@@ -12,7 +12,7 @@ resource "google_cloud_run_service" "openshed" {
         }
         env {
           name = "ALLOWED_HOSTS"
-          value = var.django_allowed_hosts
+          value = "${var.gcp_service_name}-${var.gcp_service_suffix}"
         }
         env {
           name = "DATABASE_URL"
