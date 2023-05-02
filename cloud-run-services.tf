@@ -6,6 +6,10 @@ resource "google_cloud_run_service" "openshed" {
     spec {
       containers {
         image = "begblev/openshed:latest"
+        ports {
+          name = "http1"
+          container_port = 8000
+        }
         env {
           name = "ALLOWED_HOSTS"
           value = var.django_allowed_hosts
