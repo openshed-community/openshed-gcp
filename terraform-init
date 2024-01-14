@@ -1,0 +1,2 @@
+terraform init \
+  -backend-config="bucket=${GCP_TERRAFORM_STATE_BUCKET}"
